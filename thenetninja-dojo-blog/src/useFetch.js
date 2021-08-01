@@ -29,7 +29,7 @@ const useFetch = (url) => {
             setError(err.message);
           }
         })
-    }, 1000)
+    }, 1)
 
     // aborts fetch associated
     // will cancel the fetch when the page goes to new route white its still fetching
