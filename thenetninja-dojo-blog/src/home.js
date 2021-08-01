@@ -13,13 +13,14 @@ const Home = () => {
       })
       .then(data => {
         setBlogs(data)
+        setIsLoading(false);
       })
   }, []);
 
   return ( 
     <div className="home">
-      {/* { isLoading && <div>Loading...</div>} */}
-      {(blogs && <BlogList blogs={blogs} title='All Blogs!' />) ?? <div>Loading...</div>}
+      { isLoading && <div>Loading...</div>}
+      {(blogs && <BlogList blogs={blogs} title='All Blogs!' />)}
     </div>
    );
 }
